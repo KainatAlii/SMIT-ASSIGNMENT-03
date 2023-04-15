@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <title>Movie Recommendation App</title>
+  </head>
+  <body>
+    <h1>Movie Recommendation App</h1>
+    <form>
+      <label for="genre">Genre:</label>
+      <select id="genre">
+        <option value="action">Action</option>
+        <option value="comedy">Comedy</option>
+        <option value="drama">Drama</option>
+        <option value="horror">Horror</option>
+        <option value="sci-fi">Sci-Fi</option>
+      </select>
+      <br>
+      <label for="rating">Rating:</label>
+      <select id="rating">
+        <option value="5">5 Stars</option>
+        <option value="4">4 Stars</option>
+        <option value="3">3 Stars</option>
+        <option value="2">2 Stars</option>
+        <option value="1">1 Star</option>
+      </select>
+      <br>
+      <label for="year">Release Year:</label>
+      <select id="year">
+        <option value="2023">2023</option>
+        <option value="2022">2022</option>
+        <option value="2021">2021</option>
+        <option value="2020">2020</option>
+        <option value="2019">2019</option>
+        <option value="2018">2018</option>
+        <option value="2017">2017</option>
+      </select>
+      <br>
+      <button type="submit">Get Recommendations</button>
+    </form>
+    <div id="recommendations"></div>
+    <script>
+        const movies = [
+  {
+    title: "The Matrix",
+    genre: "sci-fi",
+    rating: 5,
+    year: 1999
+  },
+  {
+    title: "Jurassic Park",
+    genre: "action",
+    rating: 4,
+    year: 1993
+  },
+  {
+    title: "Pulp Fiction",
+    genre: "drama",
+    rating: 5,
+    year: 1994
+  },
+  {
+    title: "The Hangover",
+    genre: "comedy",
+    rating: 3,
+    year: 2009
+  },
+  {
+    title: "The Shining",
+    genre: "horror",
+    rating: 4,
+    year: 1980
+  }
+];
+
+// Define a function to filter movies based on user preferences
+function filterMovies(genre, rating, year) {
+  return movies.filter(movie => {
+    return movie.genre === genre && movie.rating >= rating && movie.year >= year;
+  });
+}
+
+// Define a function to create HTML elements for each movie recommendation
+function createMovieElement(movie) {
+  const movieElement = document.createElement("div");
+  const titleElement = document.createElement("h2");
+  const genreElement = document.createElement("p");
+  const ratingElement = document.createElement("p");
+  const yearElement = document.createElement("p");
+}
+  titleElement.textContent = movie.title;
+  genreElement.textContent = "Genre: " + movie.genre;
+  ratingElement.textContent
+    </script>
+  </body>
+</html>
